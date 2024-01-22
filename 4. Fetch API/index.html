@@ -48,8 +48,8 @@
               .then(data => {newUserData = data.newUserData; console.log("New User", data)})
 
             // Todo 4.4 Update the information of the user that you have created
-            fetch('https://reqres.in/api/users/${newUserData}', {
-                method: 'PATCH',
+            fetch('https://reqres.in/api/users/2', {
+                method: 'PUT',
                 headers: {
                     'Content-Type':'application/json'
                 },
@@ -60,7 +60,7 @@
               .then(data => console.log("Updated User", data))
 
             // Todo 4.5 Delete the user that you have created
-            fetch('https://reqres.in/api/users/${newUserData}', {
+            fetch('https://reqres.in/api/users/2', {
                 method:'DELETE'
             }).then(res => console.log("User Deleted"));
             // Checkpoint 4.2 What is the difference between callbacks, then-catch vs await-try-catch? When should you use one over the other
